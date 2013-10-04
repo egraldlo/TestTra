@@ -1,0 +1,1 @@
+c语言中，goto是不能跨越函数的，setjmp和longjmp是可以的。

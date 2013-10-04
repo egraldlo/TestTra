@@ -1,0 +1,29 @@
+this project is every tests about my program. or something I record something!
+
+the test contains:
+1, producer-consumer problem
+2, theron-test(you must use two shell to communicate)
+3, test tree before theron connect
+4, test the daemon
+5, test the fork
+6, exception test
+7, effect cpp test
+8, gen data for project test
+9, boost asio test
+10, boost serial test
+11, bitmap
+12, hashtable
+13, thread pool 
+14, affinity test
+15, digui
+16, cpu processor test
+17, barrier test
+18, B tree
+
+the record contains:
+1, genie install
+2, vpn client set in centos
+3, deamon
+4, socket
+5, gdb use
+6, redis

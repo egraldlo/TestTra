@@ -1,0 +1,13 @@
+1，下一步是研究redis的时间队列是如何的，以及线程队列的使用
+
+3, 在有一次client连接并且发出一条set命令的时候，rfileProc会有两次执行，因为一次是接受client端
+   的连接，还有一次则是接受已经连接的客户端发送的set命令。
+   分开来看：
+   3.1， 当客户端连接的时候，rfileProc将调用函数createClient()创建一个新的client实例
+         调用过程为：
+         aeProcessEvents()->acceptTcpHandler()->acceptCommonHandler()->createClient()->aeCreateFileEvent()
+         
+   3.2， 当客户端发送一条命令的时候，比如是set key key1，rfileProc将调用函数readQueryFromClient()
+         调用过程为：
+         aeProcessEvents()->readQueryFromClient()->processInputBuffer()->processCommand()->call()->setCommand()
+         
