@@ -5,7 +5,7 @@
 #include <pthread.h>
 #include <sched.h>
 
-// 查看物理CPU的个数
+// 查看物理CPU的个数 注释
 // cat /proc/cpuinfo | grep "physical id" | sort |uniq |wc -l
 // 查看每个CPU上核的个数
 // cat /proc/cpuinfo | grep "core id" | sort -u |wc -l
