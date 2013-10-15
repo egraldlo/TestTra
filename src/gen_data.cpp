@@ -38,14 +38,14 @@ int gen_data_int(void){
 
 int gen_data_binary(void){
 	int file=0;
-	if((file=open("/home/casa/data/Uniform_0_99.column_10M_tuple",O_RDWR|O_CREAT))==0)
+	if((file=open("/home/casa/storage/data/file_sort_int.txt",O_RDWR|O_CREAT))==0)
 		printf("cant open file\n");
 	printf("file: %d\n",file);
 	int number_for_test=0;
-	for(int i=0;i<10485760;i++){//100M
+	for(int i=4;i>0;i--){//100M
 //		while(number_for_test<100){
 //			number_for_test=i;
-			number_for_test=rand()%1000;
+			number_for_test=rand()%10;
 //			printf("%d\n",number_for_test);
 //		}
 //		char str[4];

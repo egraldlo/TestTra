@@ -19,6 +19,9 @@ the test contains:
 16, cpu processor test
 17, barrier test
 18, B tree
+19, insert sort
+20, writter protobuf
+21, readder protobuf
 
 the record contains:
 1, genie install

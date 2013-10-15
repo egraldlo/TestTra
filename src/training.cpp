@@ -37,9 +37,14 @@ using namespace std;
 #include "Barrier.h"
 #include "BarrierTest.h"
 #include "Trees.h"
+#include "insert_sort.h"
+#include "writter.h"
+#include "readder.h"
 
 #include <pthread.h>
 #include <unistd.h>
+
+int array[]={3,1,8,4,9,3,4,23,42,43,52,13,5,7,243,35,765,86,234,5467678,243,525,25};
 
 pthread_mutex_t lock_;
 
@@ -74,6 +79,9 @@ int main() {
 	std::cout<<"16, cpu processor test"<<endl;
 	std::cout<<"17, barrier test"<<endl;
 	std::cout<<"18, B tree"<<endl;
+	std::cout<<"19, insert sort"<<endl;
+	std::cout<<"20, writter protobuf"<<endl;
+	std::cout<<"21, readder protobuf"<<endl;
 
 	int choose=0;
 	scanf("%d",&choose);
@@ -350,6 +358,24 @@ int main() {
 		printf("b tree test\n");
 		break;
 	}
+	case 19:{
+			printf("insert sort test\n");
+			insertion_sort("/home/casa/storage/data/file_sort_int.txt",0,3);
+			printf("insert sort test\n");
+			break;
+		}
+	case 20:{
+			printf("writter test\n");
+			writter();
+			printf("writter test\n");
+			break;
+		}
+	case 21:{
+			printf("readder test\n");
+			readder();
+			printf("readder test\n");
+			break;
+		}
 	default:
 		printf("over!\n");
 	}

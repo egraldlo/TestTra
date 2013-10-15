@@ -1,0 +1,6 @@
+message helloworld{
+	required int64 id=1;
+	required string str=2;
+	optional int64 opt=3;
+}
+
