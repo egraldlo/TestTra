@@ -58,6 +58,8 @@ void dummy_task(void *arg) {
 }
 
 int main() {
+	printf("%d",sizeof(float));
+	printf("%d",sizeof(long));
 
 	std::cout << "!!!Hello New Machine!!!" <<std::endl; // prints !!!Hello World!!!
 	std::cout<<"little program, and you can choose:"<<std::endl;

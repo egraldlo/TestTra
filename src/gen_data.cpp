@@ -38,11 +38,11 @@ int gen_data_int(void){
 
 int gen_data_binary(void){
 	int file=0;
-	if((file=open("/home/casa/storage/data/file_sort_int.txt",O_RDWR|O_CREAT))==0)
+	if((file=open("/home/casa/storage/data/1",O_RDWR|O_CREAT))==0)
 		printf("cant open file\n");
 	printf("file: %d\n",file);
 	int number_for_test=0;
-	for(int i=4;i>0;i--){//100M
+	for(int i=0;i<16777216;i++){//100M
 //		while(number_for_test<100){
 //			number_for_test=i;
 			number_for_test=rand()%10;
