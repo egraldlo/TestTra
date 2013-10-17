@@ -13,7 +13,7 @@ LIBS = -lboost_serialization -lpthread -ltherond -lboost_system -lboost_thread \
 TARGET = bin/training
 
 $(TARGET): $(OBJS)
-	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
+	$(CXX) -o $(TARGET) $(LIBS) $(OBJS)
 
 all: $(TARGET)
 

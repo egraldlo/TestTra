@@ -40,6 +40,7 @@ using namespace std;
 #include "insert_sort.h"
 #include "writter.h"
 #include "readder.h"
+#include "hdfs_mine.h"
 
 #include <pthread.h>
 #include <unistd.h>
@@ -84,6 +85,7 @@ int main() {
 	std::cout<<"19, insert sort"<<endl;
 	std::cout<<"20, writter protobuf"<<endl;
 	std::cout<<"21, readder protobuf"<<endl;
+	std::cout<<"22, hdfs read in c++"<<endl;
 
 	int choose=0;
 	scanf("%d",&choose);
@@ -376,6 +378,12 @@ int main() {
 			printf("readder test\n");
 			readder();
 			printf("readder test\n");
+			break;
+		}
+	case 22:{
+			printf("hdfs in c++ test\n");
+//			hdfs_main();
+			printf("hdfs in c++ test\n");
 			break;
 		}
 	default:

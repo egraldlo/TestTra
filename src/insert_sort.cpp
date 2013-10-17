@@ -48,8 +48,9 @@ void insertion_sort(string file, int first, int last)
 		while((j>=first) && (*(reinterpret_cast<int*>(base)+j) > temp))  //当first=0，j循环到-1时，由于[[短路求值]]，不会运算array[-1]
 		{
 			//将后面的值，如果小于前面的值就放在前面去，一个一个向前比较
-			int *val=(reinterpret_cast<int*>(base)+j);
-			*(reinterpret_cast<int*>(base)+j+1)= *val;
+			int swap=*(reinterpret_cast<int*>(base)+j);
+			cout<<"swap: "<<swap<<endl;
+			*(reinterpret_cast<int*>(base)+j+1)= *(reinterpret_cast<int*>(&swap));
 			j--;
 		}
 //		int *v=(reinterpret_cast<int*>(base)+i);
