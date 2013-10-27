@@ -41,7 +41,7 @@ using namespace std;
 #include "writter.h"
 #include "readder.h"
 #include "hdfs_mine.h"
-#include "Friend.h"
+//#include "Friend.h"
 
 #include <pthread.h>
 #include <unistd.h>
@@ -59,7 +59,7 @@ void dummy_task(void *arg) {
 	pthread_mutex_unlock(&lock_);
 }
 
-int mainmnn() {
+int main() {
 	printf("%d",sizeof(float));
 	printf("%d",sizeof(long));
 
@@ -366,7 +366,7 @@ int mainmnn() {
 	}
 	case 19:{
 			printf("insert sort test\n");
-			insertion_sort("/home/casa/storage/data/file_sort_int.txt",0,3);
+			insertion_sort("/home/casa/storage/data/3_64m",0,50331648-1);
 			printf("insert sort test\n");
 			break;
 		}
@@ -388,13 +388,13 @@ int mainmnn() {
 			printf("hdfs in c++ test\n");
 			break;
 		}
-	case 23:{
-			printf("friend func and class\n");
-				Friend *f=new Friend(1,2);
-				cout<<"dis: "<<distance(*f)<<endl;
-			printf("friend func and class\n");
-			break;
-		}
+//	case 23:{
+//			printf("friend func and class\n");
+//				Friend *f=new Friend(1,2);
+//				cout<<"dis: "<<distance(*f)<<endl;
+//			printf("friend func and class\n");
+//			break;
+//		}
 	default:
 		printf("over!\n");
 	}
