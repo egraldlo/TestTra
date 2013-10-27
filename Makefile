@@ -5,7 +5,7 @@ src/test_daemon.o src/process_fork.o src/exception.o src/effect_cpp.o src/gen_da
 src/boost_asio.o src/SChild1.o src/SParent.o src/RegisterChild.o src/BitMap.o \
 src/HashTable.o src/Thread_Pool.o src/affinity.o src/processor_num.o src/Barrier.o \
 src/BarrierTest.o src/Trees.o src/insert_sort.o src/writter.o src/helloworld.pb.o \
-src/readder.o
+src/readder.o src/Friend.o
 
 LIBS = -lboost_serialization -lpthread -ltherond -lboost_system -lboost_thread \
 -lboost_regex -lboost_date_time -lprotobuf

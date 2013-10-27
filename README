@@ -23,6 +23,7 @@ the test contains:
 20, writter protobuf
 21, readder protobuf
 22, hdfs read in c++ 
+23, friend function and class
 
 the record contains:
 1, genie install

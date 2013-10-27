@@ -41,6 +41,7 @@ using namespace std;
 #include "writter.h"
 #include "readder.h"
 #include "hdfs_mine.h"
+#include "Friend.h"
 
 #include <pthread.h>
 #include <unistd.h>
@@ -58,7 +59,7 @@ void dummy_task(void *arg) {
 	pthread_mutex_unlock(&lock_);
 }
 
-int main() {
+int mainmnn() {
 	printf("%d",sizeof(float));
 	printf("%d",sizeof(long));
 
@@ -86,6 +87,7 @@ int main() {
 	std::cout<<"20, writter protobuf"<<endl;
 	std::cout<<"21, readder protobuf"<<endl;
 	std::cout<<"22, hdfs read in c++"<<endl;
+	std::cout<<"23, friend func and class"<<endl;
 
 	int choose=0;
 	scanf("%d",&choose);
@@ -384,6 +386,13 @@ int main() {
 			printf("hdfs in c++ test\n");
 //			hdfs_main();
 			printf("hdfs in c++ test\n");
+			break;
+		}
+	case 23:{
+			printf("friend func and class\n");
+				Friend *f=new Friend(1,2);
+				cout<<"dis: "<<distance(*f)<<endl;
+			printf("friend func and class\n");
 			break;
 		}
 	default:
