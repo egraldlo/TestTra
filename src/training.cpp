@@ -366,7 +366,7 @@ int main() {
 	}
 	case 19:{
 			printf("insert sort test\n");
-			insertion_sort("/home/casa/storage/data/3_64m",0,50331648-1);
+			insertion_sort("/home/casa/storage/data/sort1");
 			printf("insert sort test\n");
 			break;
 		}

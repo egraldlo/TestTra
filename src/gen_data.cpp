@@ -39,7 +39,7 @@ int gen_data_int(void){
 
 int gen_data_binary(void){
 	int file=0;
-	if((file=open("/home/casa/storage/data/bin3",O_RDWR|O_CREAT))==0)
+	if((file=open("/home/casa/storage/data/sort_07",O_RDWR|O_CREAT))==0)
 		printf("cant open file\n");
 	printf("file: %d\n",file);
 	vector<int> v;
@@ -47,22 +47,22 @@ int gen_data_binary(void){
 //	int p22=2;
 //	int *p1=&p11;
 //	int *p2=&p22;
-	for(int i=0;i<1000000;i++){
+	for(int i=0;i<1000;i++){
 		v.push_back(i);
 	}
 //	v.push_back(p1);
 //	v.push_back(p2);
 	int number_for_test=0;
-	for(int i=0;i<1000000;i++){//100M
+	for(int i=0;i<7;i++){//100M
 //		while(number_for_test<100){
-//			number_for_test=i;
+//			number_or_test=i;
 			number_for_test=rand()%10;
 //			printf("%d\n",number_for_test);
 //		}
 //		char str[4];
 //		sprintf(str,"%d\n",number_for_test);
 		int n=0;
-		if((n=write(file,reinterpret_cast<char *>(&v[i]),4))!=4){
+		if((n=write(file,reinterpret_cast<char *>(&number_for_test),4))!=4){
 			printf("write error %d\n",n);
 		}
 	}
