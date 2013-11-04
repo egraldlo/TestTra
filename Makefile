@@ -1,4 +1,4 @@
-CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+CXXFLAGS =	-O3 -g -Wall -fmessage-length=0
 
 OBJS =	src/training.o src/producer_consumer.o src/test_theron.o src/test_tree.o \
 src/test_daemon.o src/process_fork.o src/exception.o src/effect_cpp.o src/gen_data.o \

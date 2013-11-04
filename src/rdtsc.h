@@ -47,6 +47,14 @@ static __inline__ void stopTimer(unsigned long long* t) {
 	*t = curtick() - *t;
 }
 
+static __inline__ void sliceTimerStart(unsigned long long* t) {
+	*t = curtick();
+}
+
+static __inline__ void sliceTimerStop(unsigned long long* t) {
+	*t = curtick() - *t;
+}
+
 #ifdef __cplusplus
 }
 #endif

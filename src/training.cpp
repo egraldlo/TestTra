@@ -59,6 +59,16 @@ void dummy_task(void *arg) {
 	pthread_mutex_unlock(&lock_);
 }
 
+void *timer_(void *args){
+	int i=0;
+	while(i>=0){
+		sleep(1);
+		i++;
+		printf("time: %d\n",i);
+	}
+	return (void *)(0);
+}
+
 int main() {
 	printf("%d",sizeof(float));
 	printf("%d",sizeof(long));
@@ -366,7 +376,13 @@ int main() {
 	}
 	case 19:{
 			printf("insert sort test\n");
-			insertion_sort("/home/casa/storage/data/sort1");
+//			pthread_t pid;
+//			pthread_create(&pid,NULL,timer_,NULL);
+//			insertion_sort("/home/casa/storage/data/sort1000");
+//			fetch_sort("/home/casa/storage/data/sort100");
+			c_lib_sort("/home/casa/storage/data/sort_4000m_int");
+//			self_quick_sort("/home/casa/storage/data/sort_40m_int");
+//			pthread_cancel(pid);
 			printf("insert sort test\n");
 			break;
 		}
