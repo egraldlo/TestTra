@@ -46,6 +46,7 @@ public:
 				//在这个链中还有bucket没有被遍历的时候，切换到下一个bucket
 				ret=next_it;
 				cur_it=(char *)next_it+tuple_size_it;
+				//这个指针指向一个地址，转化为指向指针的指针
 				free_it=*(void **)((char *)next_it+bucket_size_it);
 				next_it=*(void **)((char *)next_it+bucket_size_it+sizeof(void *));
 				return ret< free_it? free_it: 0;
