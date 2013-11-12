@@ -24,6 +24,7 @@ the test contains:
 21, readder protobuf
 22, hdfs read in c++ 
 23, friend function and class
+24, env
 
 the record contains:
 1, genie install
