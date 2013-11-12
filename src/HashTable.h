@@ -80,6 +80,7 @@ public:
 		it.free_it=*(void **)((char *)start+bucket_size);
 		it.next_it=*(void **)((char *)start+bucket_size+sizeof(void *));
 		it.bucketlink_start_it=start;
+		it.bucket_size_it=bucket_size;
 		return true;
 	}
 

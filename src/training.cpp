@@ -42,6 +42,7 @@ using namespace std;
 #include "readder.h"
 #include "hdfs_mine.h"
 //#include "Friend.h"
+#include "env.h"
 
 #include <pthread.h>
 #include <unistd.h>
@@ -98,6 +99,7 @@ int main() {
 	std::cout<<"21, readder protobuf"<<endl;
 	std::cout<<"22, hdfs read in c++"<<endl;
 	std::cout<<"23, friend func and class"<<endl;
+	std::cout<<"24, env test"<<endl;
 
 	int choose=0;
 	scanf("%d",&choose);
@@ -411,6 +413,12 @@ int main() {
 //			printf("friend func and class\n");
 //			break;
 //		}
+	case 24:{
+			printf("env test\n");
+			if(env()==0)
+				printf("env!!!\n");
+			printf("env success\n");
+	}
 	default:
 		printf("over!\n");
 	}
