@@ -79,6 +79,7 @@ public:
 		//取到的是free的地址
 		it.free_it=*(void **)((char *)start+bucket_size);
 		it.next_it=*(void **)((char *)start+bucket_size+sizeof(void *));
+		it.tuple_size_it=tuple_size;
 		it.bucketlink_start_it=start;
 		it.bucket_size_it=bucket_size;
 		return true;
